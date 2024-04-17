@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Análisis Léxico</title>
+</head>
+<body>
+    <h1>Resultados del Análisis Léxico</h1>
+
+    <h2>Tokens</h2>
+    <ul>
+        {% for token in tokens %}
+        <li>{{ token[0] }}: {{ token[1] }} (Línea {{ token[2] }})</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Errores</h2>
+    <ul>
+        {% for error in errores %}
+        <li>{{ error[0] }} (Línea {{ error[1] }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
